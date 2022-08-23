@@ -1,0 +1,1167 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Nunito:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.4s linear;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #c5cacb;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading::after {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 5rem;
+  height: 0.2rem;
+  background: #cca700;
+}
+.heading h3 {
+  font-size: 1.7rem;
+  color: #1c2324;
+  padding: 1rem 0;
+  text-align: center;
+}
+.heading h3 a {
+  color: #1c2324;
+  font-size: 1.4rem;
+  border: 0.1rem solid #1c2324;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+.heading h3 a:hover {
+  background: #1c2324;
+  color: #eee;
+}
+
+.heading-1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.heading-1 h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1c2324;
+}
+.heading-1 i, .heading-1 .review .review-container .box1 p, .review .review-container .box1 .heading-1 p {
+  color: #cca700;
+  font-size: 1.4rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 7%;
+  z-index: 100;
+  background: #c5cacb;
+  box-shadow: 0 0.4rem 1rem #a1a9aa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .logo img {
+  margin-right: 0.5rem;
+}
+.header .logo h1 a {
+  font-family: "Abel", sans-serif;
+  color: #1c2324;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.header .logo h1 a:hover {
+  color: #cca700;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header ul li {
+  margin: 0 1.5rem;
+}
+.header ul li a {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: #1c2324;
+}
+.header ul li a:hover {
+  color: #cca700;
+}
+.header #menu-btn {
+  display: none;
+  font-size: 2rem;
+}
+
+.home {
+  padding: 0;
+  position: relative;
+}
+.home .slide-container:nth-child(1) .slide {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/home-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home .slide-container:nth-child(2) .slide {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/home-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .slide-container:nth-child(3) .slide {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/home-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .slide-container .slide {
+  width: 100%;
+  min-height: 70vh;
+  padding-top: 5rem;
+  position: relative;
+}
+.home .slide-container .slide .content {
+  max-width: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 10rem;
+  text-align: center;
+}
+@-webkit-keyframes fade {
+  0% {
+    transform: translateY(-1rem) scale(1.1);
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: translateY(-1rem) scale(1.1);
+    opacity: 0;
+  }
+}
+.home .slide-container .slide .content h2 {
+  color: #eee;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  -webkit-animation: fade 0.4s linear 1s backwards;
+          animation: fade 0.4s linear 1s backwards;
+}
+.home .slide-container .slide .content h2 span {
+  color: #cca700;
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.home .slide-container .slide .content p {
+  color: #eee;
+  font-weight: lighter;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  -webkit-animation: fade 0.4s linear 2s backwards;
+          animation: fade 0.4s linear 2s backwards;
+}
+.home .slide-container {
+  display: none;
+}
+.home .slide-container.active {
+  display: block;
+}
+.home #prev-btn, .home #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  border: 0.1rem solid #abafb0;
+  z-index: 8;
+  color: #ccc;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.home #prev-btn {
+  left: 7%;
+}
+.home #next-btn {
+  right: 7%;
+}
+.home #prev-btn:hover, .home #next-btn:hover {
+  opacity: 1;
+}
+
+.service .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.service .box-container .box {
+  width: 10rem;
+  height: 10rem;
+  border: 0.1rem solid #1c2324;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.service .box-container .box i, .service .box-container .box .review .review-container .box1 p, .review .review-container .box1 .service .box-container .box p {
+  color: #1c2324;
+  font-size: 2rem;
+}
+.service .box-container .box p {
+  color: #1c2324;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.packages .img-container {
+  width: 60%;
+  margin: 1.5rem auto;
+  -moz-columns: 2 20rem;
+       columns: 2 20rem;
+  gap: 2rem;
+}
+.packages .img-container .box {
+  width: 100%;
+}
+.packages .img-container .box img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.packages .img-container .box a {
+  font-size: 1.5rem;
+  color: #1c2324;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  display: block;
+}
+.packages .img-container .box a i, .packages .img-container .box a .review .review-container .box1 p, .review .review-container .box1 .packages .img-container .box a p {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border: 0.1rem solid #1c2324;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+.packages .img-container .box a i:hover, .packages .img-container .box a .review .review-container .box1 p:hover, .review .review-container .box1 .packages .img-container .box a p:hover {
+  background: #1c2324;
+  color: #eee;
+}
+
+.teams .team-wrapper {
+  margin: 1.5rem 0;
+}
+.teams .team-wrapper .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.teams .team-wrapper .box-container .box {
+  width: 20rem;
+  height: 23rem;
+  position: relative;
+  box-shadow: 0 0.6rem 1rem #afb5b6;
+  border-radius: 1rem;
+}
+.teams .team-wrapper .box-container .box:hover .content {
+  opacity: 1;
+}
+.teams .team-wrapper .box-container .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+.teams .team-wrapper .box-container .box .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 2rem;
+  opacity: 0;
+}
+.teams .team-wrapper .box-container .box .content p {
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+.teams .team-wrapper .box-container .box .content .profession {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.blog .box-container .box {
+  box-shadow: 0 0.5rem 1rem #bcc1c2;
+  border: 0.1rem solid #bbc2c3;
+  padding: 2rem;
+}
+.blog .box-container .box:hover {
+  box-shadow: 0.5rem 0.5rem 1rem #a1a9aa;
+}
+.blog .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+.blog .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog .box-container .box .image img:hover {
+  transform: scale(1.1);
+}
+.blog .box-container .box .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.blog .box-container .box .content .user i, .blog .box-container .box .content .user .review .review-container .box1 p, .review .review-container .box1 .blog .box-container .box .content .user p {
+  margin-right: 1rem;
+  color: #cca700;
+  font-size: 1.5rem;
+}
+.blog .box-container .box .content .user .name {
+  font-size: 1.4rem;
+  color: #1c2324;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.blog .box-container .box .content .date {
+  font-size: 1.4rem;
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.blog .box-container .box h4, .blog .box-container .box .review .review-container .box1 .image .content .date, .review .review-container .box1 .image .content .blog .box-container .box .date {
+  color: #1c2324;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+.blog .box-container .box p {
+  color: #1c2324;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+.blog .box-container .box button {
+  border: none;
+  background: #abafb0;
+  padding: 1.5rem 3.5rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #eee;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.blog .box-container .box button:hover {
+  background: #1c2324;
+  letter-spacing: 0.1rem;
+}
+
+.footer {
+  background: #394043;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+.footer .box-container .box .logo {
+  display: flex;
+  align-items: center;
+}
+.footer .box-container .box .logo img {
+  margin-right: 0.5rem;
+}
+.footer .box-container .box .logo h1 a {
+  font-family: "Abel", sans-serif;
+  color: #eee;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.footer .box-container .box .logo h1 a:hover {
+  color: #cca700;
+}
+.footer .box-container .box .address {
+  margin-top: 0.5rem;
+}
+.footer .box-container .box p {
+  color: #eee;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  font-weight: 300;
+}
+.footer .box-container .box h4, .footer .box-container .box .review .review-container .box1 .image .content .date, .review .review-container .box1 .image .content .footer .box-container .box .date {
+  color: #eee;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.footer .box-container .box .links a {
+  display: block;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  color: #eee;
+}
+.footer .box-container .box .links a:hover {
+  letter-spacing: 0.2rem;
+}
+.footer .box-container .box form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer .box-container .box form input, .footer .box-container .review .review-container .box form .textarea, .review .review-container .footer .box-container .box form .textarea {
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  border: transparent;
+  color: #1c2324;
+  background: #eee;
+  font-size: 1.5rem;
+}
+.footer .box-container .box form input:focus, .footer .box-container .review .review-container .box form .textarea:focus, .review .review-container .footer .box-container .box form .textarea:focus {
+  background: #abafb0;
+}
+.footer .box-container .box form input::-moz-placeholder, .footer .box-container .review .review-container .box form .textarea::-moz-placeholder, .review .review-container .footer .box-container .box form .textarea::-moz-placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.footer .box-container .box form input:-ms-input-placeholder, .footer .box-container .review .review-container .box form .textarea:-ms-input-placeholder, .review .review-container .footer .box-container .box form .textarea:-ms-input-placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.footer .box-container .box form input::placeholder, .footer .box-container .review .review-container .box form .textarea::placeholder, .review .review-container .footer .box-container .box form .textarea::placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.footer .box-container .box form button {
+  border: none;
+  background: #abafb0;
+  padding: 1.5rem 3.5rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #eee;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.footer .box-container .box form button:hover {
+  background: #1c2324;
+  letter-spacing: 0.1rem;
+}
+.footer .socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.1rem solid rgba(197, 202, 203, 0.6705882353);
+  padding: 1rem 0;
+}
+.footer .socials .icons {
+  display: flex;
+  gap: 1rem;
+}
+.footer .socials .icons a {
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border: 0.1rem solid #c5cacb;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  color: #eee;
+  text-align: center;
+}
+.footer .socials .icons a:hover {
+  background: #abafb0;
+  transform: rotate(360deg);
+}
+.footer .socials .credits {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.hero-wrapper {
+  position: relative;
+  padding: 0;
+  min-height: 60vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/wrapper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero-wrapper .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 10rem;
+}
+.hero-wrapper .title h2 {
+  color: #eee;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.hero-wrapper1 {
+  position: relative;
+  padding: 0;
+  min-height: 60vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/wrapper-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.hero-wrapper1 .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 10rem;
+}
+.hero-wrapper1 .title h2 {
+  color: #eee;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.gallery .img-container {
+  -moz-columns: 3 20rem;
+       columns: 3 20rem;
+  margin: 1.5rem auto;
+  gap: 2rem;
+}
+.gallery .img-container .box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.gallery .img-container .box img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.gallery .img-container .box .content {
+  position: absolute;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+  padding: 1rem;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.gallery .img-container .box .content:hover {
+  opacity: 1;
+}
+.gallery .img-container .box .content h4, .gallery .img-container .box .review .review-container .box1 .image .content .date, .review .review-container .box1 .image .gallery .img-container .box .content .date {
+  font-size: 1.7rem;
+  color: #eee;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.gallery .img-container .box .content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #eee;
+}
+.gallery .img-container .box .content a {
+  font-size: 1.3rem;
+  background: transparent;
+  border: 0.1rem solid #abafb0;
+  padding: 0.5rem 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #eee;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.gallery .img-container .box .content a:hover {
+  background: #abafb0;
+  letter-spacing: 0.1rem;
+}
+
+.features .para {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  color: #1c2324;
+}
+.features .para a {
+  color: #1c2324;
+  font-size: 1.4rem;
+  border: 0.1rem solid #1c2324;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+}
+.features .para a:hover {
+  background: #1c2324;
+  color: #eee;
+}
+.features .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.features .box-container .box {
+  box-shadow: 0.5rem 0.5rem 1rem #bcc1c2;
+  border: 0.1rem solid #bbc2c3;
+  position: relative;
+}
+.features .box-container .box:hover {
+  box-shadow: 0.5rem 0.5rem 1rem #a1a9aa;
+}
+.features .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+.features .box-container .box .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+.features .box-container .box .image img:hover {
+  transform: scale(1.1);
+}
+.features .box-container .box .price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #eee;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.features .box-container .box .text {
+  position: absolute;
+  top: 23rem;
+  left: 2rem;
+  color: #1c2324;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.features .box-container .box .content {
+  padding: 1.5rem 1rem;
+}
+.features .box-container .box .content .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.features .box-container .box .content .title h4, .features .box-container .box .review .review-container .box1 .image .content .title .date, .review .review-container .box1 .image .features .box-container .box .content .title .date {
+  color: #1c2324;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.features .box-container .box .content .title .icons i, .features .box-container .box .content .title .icons .review .review-container .box1 p, .review .review-container .box1 .features .box-container .box .content .title .icons p {
+  font-size: 1rem;
+  color: #cca700;
+}
+.features .box-container .box .content .para2 {
+  color: #1c2324;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.features .box-container .box .content a {
+  padding: 0.5rem 1.5rem;
+  background: #abafb0;
+  color: #eee;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.features .box-container .box .content a:hover {
+  background: #1c2324;
+  letter-spacing: 0.1rem;
+}
+
+.container {
+  background: #394043;
+  padding: 0 7%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+.container p {
+  color: #eee;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.container a {
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #abafb0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.container a:hover {
+  background: #1c2324;
+}
+
+.description p {
+  font-size: 1.5rem;
+  color: #1c2324;
+  line-height: 1.6;
+}
+
+.photo .wrapper {
+  width: 80%;
+  margin: 1rem auto;
+  position: relative;
+}
+.photo .wrapper .slide-container .image {
+  width: 100%;
+  height: 30rem;
+}
+.photo .wrapper .slide-container .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.photo .wrapper .slide-container {
+  display: none;
+}
+.photo .wrapper .slide-container.active {
+  display: block;
+}
+.photo .wrapper #prev-btn, .photo .wrapper #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  background: #cca700;
+  z-index: 8;
+  color: #eee;
+  font-size: 1.3rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.photo .wrapper #prev-btn {
+  left: 0;
+}
+.photo .wrapper #next-btn {
+  right: 0;
+}
+.photo .wrapper #prev-btn:hover, .photo .wrapper #next-btn:hover {
+  opacity: 1;
+}
+.photo .image1 {
+  width: 50%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 10rem));
+  gap: 1rem;
+  height: 5rem;
+  justify-content: center;
+}
+.photo .image1 img {
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid #1c2324;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.photo .image1 img:hover {
+  opacity: 1;
+}
+
+.review .review-container .box {
+  border: 0.1rem solid #afb5b6;
+  padding: 2.5rem 1.8rem;
+  box-shadow: 0.5rem 0.5rem 1rem #bbc2c3;
+}
+.review .review-container .box h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1c2324;
+  text-transform: uppercase;
+}
+.review .review-container .box p {
+  font-size: 1.5rem;
+  color: #1c2324;
+  padding-bottom: 1rem;
+}
+.review .review-container .box .stars:hover i, .review .review-container .box .stars:hover .box1 p, .review .review-container .box1 .box .stars:hover p {
+  opacity: 100%;
+}
+.review .review-container .box .stars.disabled {
+  pointer-events: none;
+}
+.review .review-container .box .stars i, .review .review-container .box .stars .box1 p, .review .review-container .box1 .box .stars p {
+  color: #cca700;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.review .review-container .box .stars i:hover, .review .review-container .box .stars .box1 p:hover, .review .review-container .box1 .box .stars p:hover {
+  opacity: 100%;
+}
+.review .review-container .box .stars i:hover ~ i, .review .review-container .box .stars .box1 p:hover ~ i, .review .review-container .box1 .box .stars p:hover ~ i, .review .review-container .box .stars .box1 i:hover ~ p, .review .review-container .box1 .box .stars i:hover ~ p, .review .review-container .box .stars .box1 p:hover ~ p, .review .review-container .box1 .box .stars p:hover ~ p {
+  opacity: 50%;
+}
+.review .review-container .box .stars i.active, .review .review-container .box .stars .box1 p.active, .review .review-container .box1 .box .stars p.active {
+  opacity: 100%;
+}
+.review .review-container .box form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+.review .review-container .box form input, .review .review-container .box form .textarea {
+  width: 100%;
+  height: 4rem;
+  padding: 0 1rem;
+  border: 0.1rem solid #afb5b6;
+  background: transparent;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.review .review-container .box form input:focus, .review .review-container .box form .textarea:focus {
+  border: 0.1rem solid rgb(63, 63, 201);
+  box-shadow: 0.2rem 0.2rem 0.5rem #abafb0;
+}
+.review .review-container .box form input::-moz-placeholder, .review .review-container .box form .textarea::-moz-placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.review .review-container .box form input:-ms-input-placeholder, .review .review-container .box form .textarea:-ms-input-placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.review .review-container .box form input::placeholder, .review .review-container .box form .textarea::placeholder {
+  color: #1c2324;
+  text-transform: capitalize;
+}
+.review .review-container .box form .textarea {
+  height: 8rem;
+  padding: 1rem;
+}
+.review .review-container .box form button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 4rem;
+  background: #abafb0;
+  color: #eee;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 0;
+}
+.review .review-container .box form button:hover {
+  background: #1c2324;
+}
+.review .review-container .box1 {
+  border: 0.1rem solid #afb5b6;
+  padding: 2.5rem 1.8rem;
+  box-shadow: 0.5rem 0.5rem 1rem #bbc2c3;
+  margin: 1.5rem 0;
+}
+.review .review-container .box1 .image {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.review .review-container .box1 .image img {
+  width: 10%;
+  border-radius: 50%;
+  border: 0.1rem solid #bcc1c2;
+}
+.review .review-container .box1 .image .content h4, .review .review-container .box1 .image .content .date {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #1c2324;
+  margin-bottom: 0.8rem;
+}
+.review .review-container .box1 .image .content .date {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.review .review-container .box1 i, .review .review-container .box1 p {
+  color: #cca700;
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.review .review-container .box1 p {
+  color: #1c2324;
+  text-align: justify;
+}
+.review .review-container .button {
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 1rem;
+  background: #abafb0;
+  padding: 1rem 4rem;
+  cursor: pointer;
+}
+.review .review-container .button:hover {
+  background: #1c2324;
+}
+.review .review-container .button:hover i, .review .review-container .button:hover .box1 p, .review .review-container .box1 .button:hover p {
+  transform: rotate(-180deg);
+}
+.review .review-container .button button {
+  border: 0;
+  background: transparent;
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.review .review-container .button i, .review .review-container .button .box1 p, .review .review-container .box1 .button p {
+  font-size: 1.3rem;
+  color: #eee;
+}
+
+.form-wrapper {
+  width: 50%;
+  margin: 13% auto 3rem;
+  padding: 2rem;
+  border: 0.1rem solid #bbc2c3;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem #bcc1c2;
+}
+.form-wrapper h3 {
+  font-size: 2.5rem;
+  color: #1c2324;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-wrapper form .input-box, .form-wrapper form .datetime .input-box1, .form-wrapper form .user .input-box1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-wrapper form .input-box label, .form-wrapper form .datetime .input-box1 label, .form-wrapper form .user .input-box1 label {
+  color: #1c2324;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.form-wrapper form .input-box input, .form-wrapper form .datetime .input-box1 input, .form-wrapper form .user .input-box1 input, .form-wrapper .review .review-container .box form .input-box .textarea, .form-wrapper .review .review-container .box form .datetime .input-box1 .textarea, .form-wrapper .review .review-container .box form .user .input-box1 .textarea, .review .review-container .box .form-wrapper form .input-box .textarea, .review .review-container .box .form-wrapper form .datetime .input-box1 .textarea, .review .review-container .box .form-wrapper form .user .input-box1 .textarea {
+  width: 100%;
+  height: 4.5rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  color: #1c2324;
+  background: transparent;
+  border: 0.1rem solid #bbc2c3;
+  border-radius: 1rem;
+}
+.form-wrapper form .input-box input:focus, .form-wrapper form .datetime .input-box1 input:focus, .form-wrapper form .user .input-box1 input:focus, .form-wrapper .review .review-container .box form .input-box .textarea:focus, .form-wrapper .review .review-container .box form .datetime .input-box1 .textarea:focus, .form-wrapper .review .review-container .box form .user .input-box1 .textarea:focus, .review .review-container .box .form-wrapper form .input-box .textarea:focus, .review .review-container .box .form-wrapper form .datetime .input-box1 .textarea:focus, .review .review-container .box .form-wrapper form .user .input-box1 .textarea:focus {
+  border: 0.2rem solid #cca700;
+}
+.form-wrapper form .datetime, .form-wrapper form .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.form-wrapper form .datetime .input-box1, .form-wrapper form .user .input-box1 {
+  width: 100%;
+}
+.form-wrapper form button {
+  height: 4.5rem;
+  border: 0;
+  background: #abafb0;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-wrapper form button:hover {
+  background: #1c2324;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .form-wrapper {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 2rem;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .home .slide-container .slide .content {
+    padding-top: 13rem;
+  }
+  .home #prev-btn, .home #next-btn {
+    top: 90%;
+  }
+  .home #prev-btn {
+    left: 2rem;
+  }
+  .home #next-btn {
+    right: 2rem;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  }
+  .photo .wrapper {
+    width: 100%;
+  }
+  .photo .image1 {
+    width: 100%;
+  }
+  .form-wrapper {
+    width: 70%;
+    margin-top: 30%;
+  }
+}
+@media (max-width: 541px) {
+  html {
+    font-size: 50%;
+  }
+  .header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30rem;
+    height: 100%;
+    background: #abafb0;
+  }
+  .header ul.active {
+    right: 0;
+  }
+  .header ul li {
+    margin: 1.5rem 0;
+  }
+  .header #menu-btn {
+    display: inline-block;
+    z-index: 10;
+  }
+  .header .fa-times {
+    transform: rotate(360deg);
+  }
+  .home .slide-container .slide .content h2 {
+    font-size: 1.8rem;
+  }
+  .home .slide-container .slide .content h2 span {
+    font-size: 2rem;
+  }
+  .container p {
+    display: none;
+  }
+  .container a {
+    padding: 1rem 0;
+  }
+  .photo .image1 {
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 8rem));
+  }
+  .form-wrapper {
+    width: 90%;
+    margin-top: 38%;
+  }
+}/*# sourceMappingURL=input.css.map */

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style/input.css">
+    <title>Nigeria Tour & guide | Onitsha City</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- logo -->
+        <div class="logo">
+            <img src="img/travel-and-tourism.png" alt="">
+            <h1><a href="index.html">nigeria <br>tour &<br>guide</a></h1>
+        </div>
+        
+
+        <!-- nav links -->
+        <nav>
+            <ul>
+                <li><a href="cities.html">cities</a></li>
+                <li><a href="hotels.html">hotels</a></li>
+                <li><a href="parks.html">parks</a></li>
+                <li><a href="festivals.html">festivals</a></li>
+                <li><a href="nature.html">nature</a></li>
+                <li><a href="beach.html">beach</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger menu -->
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    
+    <!-- hero -->
+    <section class="hero-wrapper1">
+        <div class="title">
+            <h2>anambra city</h2>
+        </div>
+    </section>
+
+    <!-- container -->
+    <section class="container">
+        <p>location: onitsha</p>
+        <p>price: $100</p>
+        <a href="booking.html">book here</a>
+    </section>
+
+    <!-- description -->
+    <section class="description">
+        <div class="heading-1">
+            <i class="fas fa-star"></i>
+            <h3>description</h3>
+        </div>
+        <p>Onitsha, port and market town in Anambra state, southern Nigeria. The town lies on the east bank of the Niger River just south of its confluence with the Anambra River. Founded by adventurers from Benin (nearby, to the west) in the early 17th century, it grew to become the political and trading centre of the small Igbo (Ibo) kingdom of Onitsha. Its monarchical system (rare among the Igbo people) was patterned after that of Benin. An Onitsha obi (“king”) negotiated in 1857 with William Balfour Baikie, a British trader, for the establishment of a British trading post in the town.
+            <br>
+            Onitsha remains the chief entrepôt for goods coming upstream from the Niger River delta and those transported downstream from towns on the Niger and Benue rivers. Roads lead to the town from Enugu and Owerri, and the completion in 1965 of the 4,606-foot (1,404-metre) bridge across the Niger River to Asaba provides Onitsha with a direct road link to Benin City and Lagos.</p>
+    </section>
+
+    <!-- photo gallery -->
+    <section class="photo">
+        <div class="heading-1">
+            <i class="fas fa-star"></i>
+            <h3>photo gallery</h3>
+        </div>
+        <div class="wrapper">
+            <div class="slide-container active">
+                <div class="image">
+                    <img src="img/onitsha-1.jpg" alt="onitsha city" class="big-image">
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="image">
+                    <img src="img/onitsha-2.jpg" alt="onitsha city">
+                </div>
+            </div>
+            <!-- navigation -->
+            <div class="fas fa-chevron-left" id="prev-btn" onclick="prev()"></div>
+            <div class="fas fa-chevron-right" id="next-btn" onclick="next()"></div>
+        </div>
+        <div class="image1">
+            <img src="img/onitsha-1.jpg" alt="onitsha city" class="small-image">
+            <img src="img/onitsha-2.jpg" alt="onitsha city" class="small-image">
+        </div>
+    </section>
+
+    <!-- map -->
+    <section class="map">
+        <div class="heading-1">
+            <i class="fas fa-star"></i>
+            <h3>location</h3>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63470.919067744246!2d6.785228219268199!3d6.139778152378873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104393bed6cb93b7%3A0xd75544d3750782f7!2sOnitsha!5e0!3m2!1sen!2sng!4v1660929656768!5m2!1sen!2sng" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- reviews -->
+    <section class="review">
+        <div class="review-container">
+            <div class="box">
+                <h3>write a review</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque dolorum ab atque facere fuga incidunt.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                    <textarea name="message" placeholder="your review" class="textarea"></textarea>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+            <!-- second items -->
+            <div class="box1">
+                <div class="image">
+                    <img src="img/review-1.jpg" alt="">
+                    <div class="content">
+                        <h4>john doe</h4>
+                        <div class="date">april 6, 2022</div>
+                    </div>
+                </div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas deserunt impedit voluptatem possimus ab nemo quaerat, tenetur ex sequi provident laboriosam, neque pariatur voluptate voluptatibus magni placeat delectus architecto molestias!</p>
+            </div>
+            <div class="box1">
+                <div class="image">
+                    <img src="img/review-2.jpg" alt="">
+                    <div class="content">
+                        <h4>john doe</h4>
+                        <div class="date">april 6, 2022</div>
+                    </div>
+                </div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas deserunt impedit voluptatem possimus ab nemo quaerat, tenetur ex sequi provident laboriosam, neque pariatur voluptate voluptatibus magni placeat delectus architecto molestias!</p>
+            </div>
+            <div class="box1">
+                <div class="image">
+                    <img src="img/review-3.jpg" alt="">
+                    <div class="content">
+                        <h4>john doe</h4>
+                        <div class="date">april 6, 2022</div>
+                    </div>
+                </div>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas deserunt impedit voluptatem possimus ab nemo quaerat, tenetur ex sequi provident laboriosam, neque pariatur voluptate voluptatibus magni placeat delectus architecto molestias!</p>
+            </div>
+            <div class="button">
+                <button type="button">view more</button>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="heading-1">
+            <i class="fas fa-star"></i>
+            <h3>features</h3>
+        </div>
+        
+        <div class="box-container">
+            <!-- box-1 -->
+            <div class="box">
+                <div class="image">
+                    <img src="img/lagos-1.jpg" alt="lagos price list">
+                </div>
+                <div class="price">$100</div>
+                <div class="text">4 slots left</div>
+                <div class="content">
+                    <div class="title">
+                        <h4>lagos city</h4>
+                        <div class="icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque id inventore et illo doloremque aperiam.</p>
+                    <a href="">book here</a>
+                </div>
+            </div>
+            <!-- box-2 -->
+            <div class="box">
+                <div class="image">
+                    <img src="img/abeokuta-1.jpg" alt="abeokuta price list">
+                </div>
+                <div class="price">$100</div>
+                <div class="text">4 slots left</div>
+                <div class="content">
+                    <div class="title">
+                        <h4>abeokuta city</h4>
+                        <div class="icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque id inventore et illo doloremque aperiam.</p>
+                    <a href="">book here</a>
+                </div>
+            </div>
+            <!-- box-3 -->
+            <div class="box">
+                <div class="image">
+                    <img src="img/ph-3.jpg" alt="portharcourt price list">
+                </div>
+                <div class="price">$100</div>
+                <div class="text">4 slots left</div>
+                <div class="content">
+                    <div class="title">
+                        <h4>portharcourt city</h4>
+                        <div class="icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque id inventore et illo doloremque aperiam.</p>
+                    <a href="">book here</a>
+                </div>
+            </div>
+            <!-- box-4 -->
+            <div class="box">
+                <div class="image">
+                    <img src="img/jos-2.jpg" alt="lagos price list">
+                </div>
+                <div class="price">$100</div>
+                <div class="text">4 slots left</div>
+                <div class="content">
+                    <div class="title">
+                        <h4>jos city</h4>
+                        <div class="icons">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque id inventore et illo doloremque aperiam.</p>
+                    <a href="">book here</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <section class="footer">
+        <div class="box-container">
+            <!-- box-1 -->
+            <div class="box">
+                <div class="logo">
+                    <img src="img/travel-and-tourism-1.png" alt="">
+                    <h1><a href="index.html">nigeria <br>tour &<br>guide</a></h1>
+                </div>
+                <p class="address">Victoria Island,<br>Lagos, Nigeria.</p>
+                <p>www.nigeriatour&guide.email.com</p>
+                <p>+234-12346789,<br> +123-478693</p>
+            </div>
+
+            <!-- box-2 -->
+            <div class="box">
+                <h4>quick links</h4>
+                <div class="links">
+                    <a href="cities.html">cities</a>
+                    <a href="hotels.html">hotels</a>
+                    <a href="parks.html">parks</a>
+                    <a href="festivals.html">festivals</a>
+                    <a href="nature.html">nature</a>
+                    <a href="beach.html">beach</a>
+                </div>    
+            </div>
+
+            <!-- box-3 -->
+            <div class="box">
+                <p>Subscribe for newsletters</p>
+                <form action="/">
+                    <input type="email" placeholder="email">
+                    <button type="submit">subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="socials">
+            <div class="icons">
+                <a href="https://github.com/AnitaIkediashi"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/Anita_ikediashi"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/anita-ikediashi-a61668188"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="credits">
+                Designed by Ikediashi Anita Ifeoma using sass
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="js/index.js"></script>
+</body>
+</html>

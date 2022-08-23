@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style/input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Nigeria Tour & Guide | Home page</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- logo -->
+        <div class="logo">
+            <img src="img/travel-and-tourism.png" alt="">
+            <h1><a href="index.html">nigeria <br>tour &<br>guide</a></h1>
+        </div>
+        
+
+        <!-- nav links -->
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#packages">packages</a></li>
+                <li><a href="#teams">teams</a></li>
+                <li><a href="#blog">blog</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger menu -->
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+
+    <!-- hero -->
+    <section class="home" id="home">
+        <!-- 1st box -->
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h2>Explore with <span>nigeria tour and guide</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum possimus aliquid dolor mollitia ratione consequatur voluptatem dicta dignissimos expedita sapiente!</p>
+                </div>
+            </div>
+        </div>
+        <!-- 2nd box -->
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h2>Adventure to popular cities and wonders of nature</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum possimus aliquid dolor mollitia ratione consequatur voluptatem dicta dignissimos expedita sapiente!</p>
+                </div>
+            </div>
+        </div>
+        <!-- 3rd box -->
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h2>Enjoy the best and comfortable hotels</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum possimus aliquid dolor mollitia ratione consequatur voluptatem dicta.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- navigation -->
+        <div class="fas fa-chevron-left" id="prev-btn" onclick="prev()"></div>
+        <div class="fas fa-chevron-right" id="next-btn" onclick="next()"></div>
+    </section>
+
+    <!-- services -->
+    <section class="service" id="services">
+        <div class="heading" data-aos="fade-up" data-aos-delay="150">
+            <h3>Services we provide</h3>
+        </div>
+
+        <div class="box-container">
+            <!-- box 1 -->
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-plane-departure"></i>
+                <p>flight</p>
+            </div>
+            <!-- box 2 -->
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <i class="fas fa-hotel"></i>
+                <p>hotel</p>
+            </div>
+            <!-- box 3 -->
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <i class="fas fa-car"></i>
+                <p>car rental</p>
+            </div>
+            <!-- box 4 -->
+            <div class="box" data-aos="fade-up" data-aos-delay="750">
+                <i class="fas fa-hiking"></i>
+                <p>tour</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- packages -->
+    <section class="packages" id="packages">
+        <div class="heading" data-aos="fade-up" data-aos-delay="150">
+            <h3>Our Packages</h3>
+        </div>
+        <div class="img-container">
+            <div class="box" data-aos="fade-right" data-aos-delay="300">
+                <img src="img/city-lagos.jpg" alt="city">
+                <a href="cities.html">cities <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="box" data-aos="fade-left" data-aos-delay="300">
+                <img src="img/hotel-golden.jpg" alt="hotel">
+                <a href="hotels.html">hotels <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="box" data-aos="fade-right" data-aos-delay="450">
+                <img src="img/park-kainji.jpg" alt="park">
+                <a href="parks.html">parks <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="box" data-aos="fade-left" data-aos-delay="450">
+                <img src="img/festival-newyam.jpg" alt="festival">
+                <a href="festivals.html">festivals <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="box" data-aos="fade-right" data-aos-delay="600">
+                <img src="img/nature-awhum.jpg" alt="nature">
+                <a href="nature.html">nature <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="box" data-aos="fade-left" data-aos-delay="600">
+                <img src="img/beach-coconut.jpg" alt="beach">
+                <a href="beach.html">beach life <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- teams -->
+    <section class="teams" id="teams">
+        <div class="heading" data-aos="fade-up" data-aos-delay="150">
+            <h3>Meet the Teams</h3>
+        </div>
+        <div class="team-wrapper">
+            <div class="box-container">
+                <!-- box-1 -->
+                <div class="box" data-tilt data-tilt-scale="1.1" data-tilt-max="40" data-aos="fade-right" data-aos-delay="300">
+                    <img src="img/review-1.jpg" alt="">
+                    <div class="content">
+                        <p>john doe</p>
+                        <div class="profession">tour guide</div>
+                    </div>
+                </div>
+                <!-- box-2 -->
+                <div class="box" data-tilt data-tilt-scale="1.1" data-tilt-max="40" data-aos="fade-right" data-aos-delay="450">
+                    <img src="img/review-2.jpg" alt="">
+                    <div class="content">
+                        <p>jane doe</p>
+                        <div class="profession">travel agent</div>
+                    </div>
+                </div>
+                <!-- box-3 -->
+                <div class="box" data-tilt data-tilt-scale="1.1" data-tilt-max="40" data-aos="fade-right" data-aos-delay="600">
+                    <img src="img/review-3.jpg" alt="">
+                    <div class="content">
+                        <p>sarah doe</p>
+                        <div class="profession">resort manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+    <section class="blog" id="blog">
+        <div class="heading" data-aos="fade-up" data-aos-delay="150">
+            <h3>Recent Updates / <a href="#">View all</a></h3>
+        </div>
+        <div class="box-container">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="img/beach-coconut.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                        <span class="name">john doe</span>
+                    </div>
+                    <div class="date">mar 20, 2022</div>
+                </div>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo laboriosam, nostrum omnis totam praesentium.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nihil magni eligendi. Minima, molestias soluta temporibus sapiente sit animi tempora...</p>
+                <button type="button">read more</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <div class="image">
+                    <img src="img/city-abeokuta.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                        <span class="name">john doe</span>
+                    </div>
+                    <div class="date">mar 20, 2022</div>
+                </div>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo laboriosam, nostrum omnis totam praesentium.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nihil magni eligendi. Minima, molestias soluta temporibus sapiente sit animi tempora...</p>
+                <button type="button">read more</button>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <div class="image">
+                    <img src="img/golden-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                        <span class="name">john doe</span>
+                    </div>
+                    <div class="date">mar 20, 2022</div>
+                </div>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo laboriosam, nostrum omnis totam praesentium.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nihil magni eligendi. Minima, molestias soluta temporibus sapiente sit animi tempora...</p>
+                <button type="button">read more</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <section class="footer">
+        <div class="box-container">
+            <!-- box-1 -->
+            <div class="box">
+                <div class="logo">
+                    <img src="img/travel-and-tourism-1.png" alt="">
+                    <h1><a href="index.html">nigeria <br>tour &<br>guide</a></h1>
+                </div>
+                <p class="address">Victoria Island,<br>Lagos, Nigeria.</p>
+                <p>www.nigeriatour&guide.email</p>
+                <p>+234-12346789,<br> +123-478693</p>
+            </div>
+
+            <!-- box-2 -->
+            <div class="box">
+                <h4>quick links</h4>
+                <div class="links">
+                    <a href="#home">home</a>
+                    <a href="#services">services</a>
+                    <a href="#packages">packages</a>
+                    <a href="#teams">teams</a>
+                    <a href="#blog">blog</a>
+                </div>    
+            </div>
+
+            <!-- box-3 -->
+            <div class="box">
+                <p>Subscribe for newsletters</p>
+                <form action="/">
+                    <input type="email" placeholder="email">
+                    <button type="submit">subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="socials">
+            <div class="icons">
+                <a href="https://github.com/AnitaIkediashi"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/Anita_ikediashi"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/anita-ikediashi-a61668188"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="credits">
+                Designed by Ikediashi Anita Ifeoma using sass
+            </div>
+        </div>
+    </section>
+
+
+    
+    <script src="js/index.js"></script>
+    <script src="js/tilt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+    </script>
+    
+</body>
+</html>
